@@ -1,0 +1,16 @@
+@(organizationForm: Form[Organization])
+
+@import helper._
+
+@main(){
+
+<ul>
+@for(organization <- organizationForm)
+{
+<li>
+<a href="@routes.account.TestOrganization.edit(organization.id)">@organization.name</a>
+
+</li>
+}
+</ul>
+}
